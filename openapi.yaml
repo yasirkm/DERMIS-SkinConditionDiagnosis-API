@@ -18,6 +18,7 @@ paths:
       description: |
         Query database for diagnosis of skin condition.
         Returns the condition's description, causes, treatments, and severity.
+      operationId: db.diagnose
       responses:
         "200":
           description: Successful Diagnosis
