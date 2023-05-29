@@ -1,8 +1,8 @@
 openapi: 3.1.0
 info:
   title: DERMIS - Skin Condition Diagnosis API
-  description: API for DERMIS System which diagnoses skin conditions
-  version: 0.0.0
+  description: API for DERMIS System which diagnoses skin conditions.
+  version: 0.1.0
 paths:
   /diag/{condition}:
     parameters:
@@ -13,13 +13,24 @@ paths:
           type: string
         example: acne
     get:
+      summary: Get diagnosis for skin condition
+      description: |
+        Query database for diagnosis of skin condition.
+        Returns the condition's description, causes, treatments, and severity.
       responses:
         "200":
-          description: successful diagnosis
+          description: Successful Diagnosis
           content:
             application/json:
               schema:
+                title: Skin Condition Diagnosis Result
+                description: Skin condition diagnosis result containing the condition's description, causes, treatments, and severity in JSON format
                 type: object
+                required:
+                  - description
+                  - causes
+                  - treatments
+                  - severity
                 properties:
                   description:
                     type: string
@@ -35,7 +46,8 @@ paths:
                       - high
               examples:
                 acne:
-                  summary: acne condition diagnosis
+                  summary: Acne condition diagnosis
+                  description: Diagnosis of acne, a condition of low severity.
                   value:
                     description: >
                       Acne is a common skin condition that occurs when hair follicles become clogged with oil, 
@@ -45,11 +57,12 @@ paths:
                     treatments: Acne could be treated by exfoliating your face regularly.
                     severity: low
                 cellulitis:
-                  summary: cellulitis condition diagnosis
+                  summary: Cellulitis condition diagnosis
+                  description: Diagnosis of cellulitis, a condition of medium to high severity.
                   value:
                     description: Cellulitis is a bacterial infection that affects the deeper layers of the skin and the underlying tissues.
                     causes: Cellulitis could be caused by skin breaks or impaired immune system.
-                    treatments: Cellulitic could be treated by the use of antibiotics.
+                    treatments: Cellulitic could be treated by the use of antibiotics, though it is advised to seek professional help.
                     severity: medium
         "404":
-          description: condition not recognized
+          description: Unrecognized Skin Condition
