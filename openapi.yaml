@@ -1,0 +1,55 @@
+openapi: 3.1.0
+info:
+  title: DERMIS - Skin Condition Diagnosis API
+  description: API for DERMIS System which diagnoses skin conditions
+  version: 0.0.0
+paths:
+  /diag/{condition}:
+    parameters:
+      - name: condition
+        in: path
+        required: true
+        schema:
+          type: string
+        example: acne
+    get:
+      responses:
+        "200":
+          description: successful diagnosis
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  description:
+                    type: string
+                  causes:
+                    type: string
+                  treatments:
+                    type: string
+                  severity:
+                    type: string
+                    enum:
+                      - low
+                      - medium
+                      - high
+              examples:
+                acne:
+                  summary: acne condition diagnosis
+                  value:
+                    description: >
+                      Acne is a common skin condition that occurs when hair follicles become clogged with oil, 
+                      dead skin cells, and bacteria. It primarily affects areas of the skin with a high density of oil glands, 
+                      such as the face, chest, upper back, and shoulders.
+                    causes: Acne could be caused by a lot of factors ranging from hygiene to hormonal issue.
+                    treatments: Acne could be treated by exfoliating your face regularly.
+                    severity: low
+                cellulitis:
+                  summary: cellulitis condition diagnosis
+                  value:
+                    description: Cellulitis is a bacterial infection that affects the deeper layers of the skin and the underlying tissues.
+                    causes: Cellulitis could be caused by skin breaks or impaired immune system.
+                    treatments: Cellulitic could be treated by the use of antibiotics.
+                    severity: medium
+        "404":
+          description: condition not recognized
