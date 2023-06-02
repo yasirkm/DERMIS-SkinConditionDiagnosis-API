@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: DERMIS - Skin Condition Diagnosis API
   description: API for DERMIS System which diagnoses skin conditions.
-  version: 0.1.1
+  version: 0.2.1
 paths:
   /diag/{condition}:
     parameters:
@@ -18,7 +18,8 @@ paths:
       description: |
         Query database for diagnosis of skin condition.
         Returns the condition's description, causes, treatments, and severity.
-      operationId: db.diagnose
+      x-openapi-router-controller: condition_db
+      operationId: condition_diagnosis
       responses:
         "200":
           description: Successful Diagnosis
