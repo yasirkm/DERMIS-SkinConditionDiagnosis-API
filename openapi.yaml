@@ -18,8 +18,10 @@ paths:
       description: |
         Query database for diagnosis of skin condition.
         Returns the condition's description, causes, treatments, and severity.
-      x-openapi-router-controller: condition_db
-      operationId: condition_diagnosis
+      x-openapi-router-controller: handlers.diagnosis
+      operationId: get_disease_info
+      tags:
+        - diagnosis
       responses:
         "200":
           description: Successful Diagnosis

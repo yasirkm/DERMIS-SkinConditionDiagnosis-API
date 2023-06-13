@@ -885,9 +885,9 @@ ul.nav-tabs {
             -->
             <li class="nav-fixed nav-header active" data-group="_"><a href="#api-_">API Summary</a></li>
 
-                  <li class="nav-header" data-group="Default"><a href="#api-Default">API Methods - Default</a></li>
-                    <li data-group="Default" data-name="conditionDiagnosis" class="">
-                      <a href="#api-Default-conditionDiagnosis">conditionDiagnosis</a>
+                  <li class="nav-header" data-group="Diagnosis"><a href="#api-Diagnosis">API Methods - Diagnosis</a></li>
+                    <li data-group="Diagnosis" data-name="getDiseaseInfo" class="">
+                      <a href="#api-Diagnosis-getDiseaseInfo">getDiseaseInfo</a>
                     </li>
           </ul>
         </nav>
@@ -910,12 +910,12 @@ ul.nav-tabs {
           </div>
         </div>
         <div id="sections">
-                <section id="api-Default">
-                  <h1>Default</h1>
-                    <div id="api-Default-conditionDiagnosis">
-                      <article id="api-Default-conditionDiagnosis-0" data-group="User" data-name="conditionDiagnosis" data-version="0">
+                <section id="api-Diagnosis">
+                  <h1>Diagnosis</h1>
+                    <div id="api-Diagnosis-getDiseaseInfo">
+                      <article id="api-Diagnosis-getDiseaseInfo-0" data-group="User" data-name="getDiseaseInfo" data-version="0">
                         <div class="pull-left">
-                          <h1>conditionDiagnosis</h1>
+                          <h1>getDiseaseInfo</h1>
                           <p>Get diagnosis for skin condition</p>
                         </div>
                         <div class="pull-right"></div>
@@ -931,48 +931,48 @@ Returns the condition&#39;s description, causes, treatments, and severity.
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Default-conditionDiagnosis-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Default-conditionDiagnosis-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Default-conditionDiagnosis-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Default-conditionDiagnosis-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Default-conditionDiagnosis-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Default-conditionDiagnosis-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Default-conditionDiagnosis-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Default-conditionDiagnosis-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Default-conditionDiagnosis-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Default-conditionDiagnosis-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Default-conditionDiagnosis-0-python">Python</a></li>
-                          <li class=""><a href="#examples-Default-conditionDiagnosis-0-rust">Rust</a></li>
+                          <li class="active"><a href="#examples-Diagnosis-getDiseaseInfo-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Diagnosis-getDiseaseInfo-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Diagnosis-getDiseaseInfo-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Diagnosis-getDiseaseInfo-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Diagnosis-getDiseaseInfo-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Diagnosis-getDiseaseInfo-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Diagnosis-getDiseaseInfo-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Diagnosis-getDiseaseInfo-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Diagnosis-getDiseaseInfo-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Diagnosis-getDiseaseInfo-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Diagnosis-getDiseaseInfo-0-python">Python</a></li>
+                          <li class=""><a href="#examples-Diagnosis-getDiseaseInfo-0-rust">Rust</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Default-conditionDiagnosis-0-curl">
+                          <div class="tab-pane active" id="examples-Diagnosis-getDiseaseInfo-0-curl">
                             <pre class="prettyprint"><code class="language-bsh">curl -X GET \
  -H "Accept: application/json" \
  "http://localhost/diag/{condition}"
 </code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-Default-conditionDiagnosis-0-java">
+                          <div class="tab-pane" id="examples-Diagnosis-getDiseaseInfo-0-java">
                             <pre class="prettyprint"><code class="language-java">import org.openapitools.client.*;
 import org.openapitools.client.auth.*;
 import org.openapitools.client.model.*;
-import org.openapitools.client.api.DefaultApi;
+import org.openapitools.client.api.DiagnosisApi;
 
 import java.io.File;
 import java.util.*;
 
-public class DefaultApiExample {
+public class DiagnosisApiExample {
     public static void main(String[] args) {
 
         // Create an instance of the API class
-        DefaultApi apiInstance = new DefaultApi();
+        DiagnosisApi apiInstance = new DiagnosisApi();
         String condition = acne; // String | The condition to be diagnosed
 
         try {
-            Skin_Condition_Diagnosis_Result result = apiInstance.conditionDiagnosis(condition);
+            Skin_Condition_Diagnosis_Result result = apiInstance.getDiseaseInfo(condition);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#conditionDiagnosis");
+            System.err.println("Exception when calling DiagnosisApi#getDiseaseInfo");
             e.printStackTrace();
         }
     }
@@ -980,37 +980,37 @@ public class DefaultApiExample {
 </code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Default-conditionDiagnosis-0-android">
-                            <pre class="prettyprint"><code class="language-java">import org.openapitools.client.api.DefaultApi;
+                          <div class="tab-pane" id="examples-Diagnosis-getDiseaseInfo-0-android">
+                            <pre class="prettyprint"><code class="language-java">import org.openapitools.client.api.DiagnosisApi;
 
-public class DefaultApiExample {
+public class DiagnosisApiExample {
     public static void main(String[] args) {
-        DefaultApi apiInstance = new DefaultApi();
+        DiagnosisApi apiInstance = new DiagnosisApi();
         String condition = acne; // String | The condition to be diagnosed
 
         try {
-            Skin_Condition_Diagnosis_Result result = apiInstance.conditionDiagnosis(condition);
+            Skin_Condition_Diagnosis_Result result = apiInstance.getDiseaseInfo(condition);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#conditionDiagnosis");
+            System.err.println("Exception when calling DiagnosisApi#getDiseaseInfo");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-Default-conditionDiagnosis-0-groovy">
+  <div class="tab-pane" id="examples-Diagnosis-getDiseaseInfo-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-Default-conditionDiagnosis-0-objc">
+                            <div class="tab-pane" id="examples-Diagnosis-getDiseaseInfo-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">
 
 // Create an instance of the API class
-DefaultApi *apiInstance = [[DefaultApi alloc] init];
+DiagnosisApi *apiInstance = [[DiagnosisApi alloc] init];
 String *condition = acne; // The condition to be diagnosed (default to null)
 
 // Get diagnosis for skin condition
-[apiInstance conditionDiagnosisWith:condition
+[apiInstance getDiseaseInfoWith:condition
               completionHandler: ^(Skin_Condition_Diagnosis_Result output, NSError* error) {
     if (output) {
         NSLog(@"%@", output);
@@ -1022,11 +1022,11 @@ String *condition = acne; // The condition to be diagnosed (default to null)
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Default-conditionDiagnosis-0-javascript">
+                            <div class="tab-pane" id="examples-Diagnosis-getDiseaseInfo-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var DermisSkinConditionDiagnosisApi = require('dermis_skin_condition_diagnosis_api');
 
 // Create an instance of the API class
-var api = new DermisSkinConditionDiagnosisApi.DefaultApi()
+var api = new DermisSkinConditionDiagnosisApi.DiagnosisApi()
 var condition = acne; // {String} The condition to be diagnosed
 
 var callback = function(error, data, response) {
@@ -1036,14 +1036,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.conditionDiagnosis(condition, callback);
+api.getDiseaseInfo(condition, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-Default-conditionDiagnosis-0-angular">
+                            <!--<div class="tab-pane" id="examples-Diagnosis-getDiseaseInfo-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-Default-conditionDiagnosis-0-csharp">
+                            <div class="tab-pane" id="examples-Diagnosis-getDiseaseInfo-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using Org.OpenAPITools.Api;
@@ -1052,21 +1052,21 @@ using Org.OpenAPITools.Model;
 
 namespace Example
 {
-    public class conditionDiagnosisExample
+    public class getDiseaseInfoExample
     {
         public void main()
         {
 
             // Create an instance of the API class
-            var apiInstance = new DefaultApi();
+            var apiInstance = new DiagnosisApi();
             var condition = acne;  // String | The condition to be diagnosed (default to null)
 
             try {
                 // Get diagnosis for skin condition
-                Skin_Condition_Diagnosis_Result result = apiInstance.conditionDiagnosis(condition);
+                Skin_Condition_Diagnosis_Result result = apiInstance.getDiseaseInfo(condition);
                 Debug.WriteLine(result);
             } catch (Exception e) {
-                Debug.Print("Exception when calling DefaultApi.conditionDiagnosis: " + e.Message );
+                Debug.Print("Exception when calling DiagnosisApi.getDiseaseInfo: " + e.Message );
             }
         }
     }
@@ -1074,42 +1074,42 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Default-conditionDiagnosis-0-php">
+                            <div class="tab-pane" id="examples-Diagnosis-getDiseaseInfo-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Create an instance of the API class
-$api_instance = new OpenAPITools\Client\Api\DefaultApi();
+$api_instance = new OpenAPITools\Client\Api\DiagnosisApi();
 $condition = acne; // String | The condition to be diagnosed
 
 try {
-    $result = $api_instance->conditionDiagnosis($condition);
+    $result = $api_instance->getDiseaseInfo($condition);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->conditionDiagnosis: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DiagnosisApi->getDiseaseInfo: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Default-conditionDiagnosis-0-perl">
+                            <div class="tab-pane" id="examples-Diagnosis-getDiseaseInfo-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::OPenAPIClient::Configuration;
-use WWW::OPenAPIClient::DefaultApi;
+use WWW::OPenAPIClient::DiagnosisApi;
 
 # Create an instance of the API class
-my $api_instance = WWW::OPenAPIClient::DefaultApi->new();
+my $api_instance = WWW::OPenAPIClient::DiagnosisApi->new();
 my $condition = acne; # String | The condition to be diagnosed
 
 eval {
-    my $result = $api_instance->conditionDiagnosis(condition => $condition);
+    my $result = $api_instance->getDiseaseInfo(condition => $condition);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DefaultApi->conditionDiagnosis: $@\n";
+    warn "Exception when calling DiagnosisApi->getDiseaseInfo: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Default-conditionDiagnosis-0-python">
+                            <div class="tab-pane" id="examples-Diagnosis-getDiseaseInfo-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import openapi_client
@@ -1117,25 +1117,25 @@ from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = openapi_client.DiagnosisApi()
 condition = acne # String | The condition to be diagnosed (default to null)
 
 try:
     # Get diagnosis for skin condition
-    api_response = api_instance.condition_diagnosis(condition)
+    api_response = api_instance.get_disease_info(condition)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->conditionDiagnosis: %s\n" % e)</code></pre>
+    print("Exception when calling DiagnosisApi->getDiseaseInfo: %s\n" % e)</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Default-conditionDiagnosis-0-rust">
-                              <pre class="prettyprint"><code class="language-rust">extern crate DefaultApi;
+                            <div class="tab-pane" id="examples-Diagnosis-getDiseaseInfo-0-rust">
+                              <pre class="prettyprint"><code class="language-rust">extern crate DiagnosisApi;
 
 pub fn main() {
     let condition = acne; // String
 
-    let mut context = DefaultApi::Context::default();
-    let result = client.conditionDiagnosis(condition, &context).wait();
+    let mut context = DiagnosisApi::Context::default();
+    let result = client.getDiseaseInfo(condition, &context).wait();
 
     println!("{:?}", result);
 }
@@ -1160,7 +1160,7 @@ pub fn main() {
 <td>
 
 
-    <div id="d2e199_conditionDiagnosis_condition">
+    <div id="d2e199_getDiseaseInfo_condition">
         <div class="json-schema-view">
             <div class="primitive">
                 <span class="type">
@@ -1186,23 +1186,23 @@ The condition to be diagnosed
 
 
                           <h2>Responses</h2>
-                            <h3 id="examples-Default-conditionDiagnosis-title-200"></h3>
-                            <p id="examples-Default-conditionDiagnosis-description-200" class="marked"></p>
+                            <h3 id="examples-Diagnosis-getDiseaseInfo-title-200"></h3>
+                            <p id="examples-Diagnosis-getDiseaseInfo-description-200" class="marked"></p>
                             <script>
-                              var responseDefault200_description = `Successful Diagnosis`;
-                              var responseDefault200_description_break = responseDefault200_description.indexOf('\n');
-                              if (responseDefault200_description_break == -1) {
-                                $("#examples-Default-conditionDiagnosis-title-200").text("Status: 200 - " + responseDefault200_description);
+                              var responseDiagnosis200_description = `Successful Diagnosis`;
+                              var responseDiagnosis200_description_break = responseDiagnosis200_description.indexOf('\n');
+                              if (responseDiagnosis200_description_break == -1) {
+                                $("#examples-Diagnosis-getDiseaseInfo-title-200").text("Status: 200 - " + responseDiagnosis200_description);
                               } else {
-                                $("#examples-Default-conditionDiagnosis-title-200").text("Status: 200 - " + responseDefault200_description.substring(0, responseDefault200_description_break));
-                                $("#examples-Default-conditionDiagnosis-description-200").html(responseDefault200_description.substring(responseDefault200_description_break));
+                                $("#examples-Diagnosis-getDiseaseInfo-title-200").text("Status: 200 - " + responseDiagnosis200_description.substring(0, responseDiagnosis200_description_break));
+                                $("#examples-Diagnosis-getDiseaseInfo-description-200").html(responseDiagnosis200_description.substring(responseDiagnosis200_description_break));
                               }
                             </script>
 
 
-                            <ul id="responses-detail-Default-conditionDiagnosis-200" class="nav nav-tabs nav-tabs-examples" >
+                            <ul id="responses-detail-Diagnosis-getDiseaseInfo-200" class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-Default-conditionDiagnosis-200-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-Diagnosis-getDiseaseInfo-200-schema">Schema</a>
                                 </li>
 
 
@@ -1211,9 +1211,9 @@ The condition to be diagnosed
                             </ul>
 
 
-                            <div class="tab-content" id="responses-Default-conditionDiagnosis-200-wrapper" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-Default-conditionDiagnosis-200-schema">
-                                  <div id="responses-Default-conditionDiagnosis-schema-200" class="exampleStyle">
+                            <div class="tab-content" id="responses-Diagnosis-getDiseaseInfo-200-wrapper" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-Diagnosis-getDiseaseInfo-200-schema">
+                                  <div id="responses-Diagnosis-getDiseaseInfo-schema-200" class="exampleStyle">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = ;
@@ -1238,37 +1238,37 @@ The condition to be diagnosed
                                         }
 
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-Default-conditionDiagnosis-200-schema-data').val(JSON.stringify(schema));
-                                        var result = $('#responses-Default-conditionDiagnosis-schema-200');
+                                        $('#responses-Diagnosis-getDiseaseInfo-200-schema-data').val(JSON.stringify(schema));
+                                        var result = $('#responses-Diagnosis-getDiseaseInfo-schema-200');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-Default-conditionDiagnosis-200-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-Diagnosis-getDiseaseInfo-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
-                            <h3 id="examples-Default-conditionDiagnosis-title-404"></h3>
-                            <p id="examples-Default-conditionDiagnosis-description-404" class="marked"></p>
+                            <h3 id="examples-Diagnosis-getDiseaseInfo-title-404"></h3>
+                            <p id="examples-Diagnosis-getDiseaseInfo-description-404" class="marked"></p>
                             <script>
-                              var responseDefault404_description = `Unrecognized Skin Condition`;
-                              var responseDefault404_description_break = responseDefault404_description.indexOf('\n');
-                              if (responseDefault404_description_break == -1) {
-                                $("#examples-Default-conditionDiagnosis-title-404").text("Status: 404 - " + responseDefault404_description);
+                              var responseDiagnosis404_description = `Unrecognized Skin Condition`;
+                              var responseDiagnosis404_description_break = responseDiagnosis404_description.indexOf('\n');
+                              if (responseDiagnosis404_description_break == -1) {
+                                $("#examples-Diagnosis-getDiseaseInfo-title-404").text("Status: 404 - " + responseDiagnosis404_description);
                               } else {
-                                $("#examples-Default-conditionDiagnosis-title-404").text("Status: 404 - " + responseDefault404_description.substring(0, responseDefault404_description_break));
-                                $("#examples-Default-conditionDiagnosis-description-404").html(responseDefault404_description.substring(responseDefault404_description_break));
+                                $("#examples-Diagnosis-getDiseaseInfo-title-404").text("Status: 404 - " + responseDiagnosis404_description.substring(0, responseDiagnosis404_description_break));
+                                $("#examples-Diagnosis-getDiseaseInfo-description-404").html(responseDiagnosis404_description.substring(responseDiagnosis404_description_break));
                               }
                             </script>
 
 
-                            <ul id="responses-detail-Default-conditionDiagnosis-404" class="nav nav-tabs nav-tabs-examples" >
+                            <ul id="responses-detail-Diagnosis-getDiseaseInfo-404" class="nav nav-tabs nav-tabs-examples" >
 
 
                             </ul>
 
 
-                            <div class="tab-content" id="responses-Default-conditionDiagnosis-404-wrapper" style='margin-bottom: 10px;'>
+                            <div class="tab-content" id="responses-Diagnosis-getDiseaseInfo-404-wrapper" style='margin-bottom: 10px;'>
                             </div>
                         </article>
                       </div>
