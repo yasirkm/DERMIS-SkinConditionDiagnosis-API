@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: DERMIS - Skin Condition Diagnosis API
   description: API for DERMIS System which diagnoses skin conditions.
-  version: 0.3.1
+  version: 0.3.2
 paths:
   /diag/{condition}:
     parameters:
@@ -72,5 +72,5 @@ paths:
         "404":
           description: Unrecognized Skin Condition
 servers:
-  - url: condiag.dermis.tugasakhir.online
+  - url: https://condiag.dermis.tugasakhir.online
     description: main server
